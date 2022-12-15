@@ -7,6 +7,7 @@ using Persistence;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 namespace API.Controllers
 {
@@ -19,6 +20,7 @@ namespace API.Controllers
           }
 
           [HttpGet]//api/activities
+          // [EnableCors("CorsPolicy")]
           public async Task<ActionResult<List<Activity>>> GetActivities()
           {
                return await this._context.Activities.ToListAsync();
