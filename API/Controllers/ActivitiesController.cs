@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 using Persistence;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Cors;
-using MediatR;
 using Application.Activities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
